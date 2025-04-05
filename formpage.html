@@ -2182,10 +2182,7 @@ th {
                     </div>
                 </div>
             
-                <!-- Amputation Selection Based on Affected Side -->
-                <div id="amputationContainer" class="mt-3"></div>
-            </div>
-
+                
             <!-- Amputation Table -->
             <div id="amputationTable" class="d-none mt-4">
                 <div style="display: flex; justify-content: center; align-items: center;">
@@ -2194,197 +2191,235 @@ th {
                 <table class="table table-bordered text-center" style="max-width: 900px; margin: 20px auto;">
                     <thead>
                         <tr>
-                            <th colspan="4" id="leftHeader">LEFT</th>
-                            <th colspan="4" id="rightHeader">RIGHT</th>
+                            <th colspan="4" class="left-col">LEFT</th>
+                            <th colspan="4" class="right-col">RIGHT</th>
                         </tr>
                         <tr>
-                            <th class="table-left">Digit</th>
-                            <th class="table-left">Tamai</th>
-                            <th class="table-left">Allen</th>
-                            <th class="table-left">PNB</th>
-                            <th class="table-right">Digit</th>
-                            <th class="table-right">Tamai</th>
-                            <th class="table-right">Allen</th>
-                            <th class="table-right">PNB</th>
+                            <th class="left-col">Digit</th>
+                            <th class="left-col">Tamai</th>
+                            <th class="left-col">Allen</th>
+                            <th class="left-col">PNB</th>
+                            <th class="right-col">Digit</th>
+                            <th class="right-col">Tamai</th>
+                            <th class="right-col">Allen</th>
+                            <th class="right-col">PNB</th>
                         </tr>
                     </thead>
-                    <tbody id="tableRows"></tbody>
+                    <tbody>
+                        <!-- Example row for Thumb -->
+                        <tr>
+                            <!-- LEFT thumb -->
+                            <td class="left-col">Thumb</td>
+                            <td class="left-col"><select id="left-thumb-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="left-col"><select id="left-thumb-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="left-col"><input id="left-thumb-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+            
+                            <!-- RIGHT thumb -->
+                            <td class="right-col">Thumb</td>
+                            <td class="right-col"><select id="right-thumb-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="right-col"><select id="right-thumb-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="right-col"><input id="right-thumb-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+                        </tr>
+                        <tr>
+                            <!-- LEFT index -->
+                            <td class="left-col">Index</td>
+                            <td class="left-col"><select id="left-index-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="left-col"><select id="left-index-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="left-col"><input id="left-index-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+            
+                            <!-- RIGHT index -->
+                            <td class="right-col">Index</td>
+                            <td class="right-col"><select id="right-index-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="right-col"><select id="right-index-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="right-col"><input id="right-index-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+                        </tr>
+                        <tr>
+                            <!-- LEFT middle -->
+                            <td class="left-col">Middle</td>
+                            <td class="left-col"><select id="left-middle-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="left-col"><select id="left-middle-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="left-col"><input id="left-middle-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+            
+                            <!-- RIGHT middle -->
+                            <td class="right-col">Middle</td>
+                            <td class="right-col"><select id="right-middle-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="right-col"><select id="right-middle-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="right-col"><input id="right-middle-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+                        </tr>
+                        <tr>
+                            <!-- LEFT ring -->
+                            <td class="left-col">Ring</td>
+                            <td class="left-col"><select id="left-ring-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="left-col"><select id="left-ring-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="left-col"><input id="left-ring-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+            
+                            <!-- RIGHT thumb -->
+                            <td class="right-col">Ring</td>
+                            <td class="right-col"><select id="right-ring-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="right-col"><select id="right-ring-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="right-col"><input id="right-ring-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+                        </tr>
+                        <tr>
+                            <!-- LEFT little -->
+                            <td class="left-col">Little</td>
+                            <td class="left-col"><select id="left-little-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="left-col"><select id="left-little-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="left-col"><input id="left-little-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+            
+                            <!-- RIGHT little -->
+                            <td class="right-col">Thumb</td>
+                            <td class="right-col"><select id="right-little-tamai" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                            </select></td>
+                            <td class="right-col"><select id="right-little-allen" class="form-control">
+                                <option value="">Select</option>
+                                <option value="Zone1">Zone 1</option>
+                                <option value="Zone2">Zone 2</option>
+                                <option value="Zone3">Zone 3</option>
+                                <option value="Zone4">Zone 4</option>
+                            </select></td>
+                            <td class="right-col"><input id="right-little-pnb" type="text" class="form-control pnb-input" placeholder="e.g. 1-2-3"></td>
+                        </tr>
+                        <!-- Repeat the same row pattern for Index, Middle, Ring, Little fingers -->
+            
+                        <!-- ... copy this row and replace "thumb" with "index", "middle", "ring", "little" ... -->
+                    </tbody>
                 </table>
             </div>
             
             <script>
-                function generateFingerSelection(hand) {
-    const fingers = ["Thumb", "Index", "Middle", "Ring", "Little"];
-    return `
-        <div class="mb-3">
-            <label class="form-label fw-bold">${hand.charAt(0).toUpperCase() + hand.slice(1)} Hand Amputations:</label>
-            <div class="d-flex flex-wrap">
-                ${fingers.map(finger => `
-                    <div class="form-check me-3">
-                        <input class="form-check-input" type="radio" name="${hand}-finger" id="${hand}-${finger.toLowerCase()}" value="${finger.toLowerCase()}" onchange="updateTable()">
-                        <label class="form-check-label" for="${hand}-${finger.toLowerCase()}">${finger}</label>
-                    </div>
-                `).join("")}
-            </div>
-        </div>
-    `;
-}
-
+                
 function updateAmputationSection() {
-    let selectedSide = document.querySelector('input[name="side"]:checked')?.value;
-    let amputationStatus = document.querySelector('input[name="finger_amputation"]:checked')?.value;
-    let amputationContainer = document.getElementById("amputationContainer");
+    const status = document.querySelector('input[name="finger_amputation"]:checked')?.value;
+    const side = document.querySelector('input[name="side"]:checked')?.value;
 
-    if (amputationStatus === "present") {
-        amputationContainer.innerHTML = selectedSide === "both" ?
-            `<div class="row">
-                <div class="col-md-6">${generateFingerSelection("left")}</div>
-                <div class="col-md-6">${generateFingerSelection("right")}</div>
-            </div>` : generateFingerSelection(selectedSide);
-    } else {
-        amputationContainer.innerHTML = "";
-        document.getElementById("amputationTable").classList.add("d-none");
+    const table = document.getElementById("amputationTable");
+    const leftCols = document.querySelectorAll(".left-col");
+    const rightCols = document.querySelectorAll(".right-col");
+
+    if (status !== "present") {
+        table.classList.add("d-none");
+        return;
     }
-    updateTable();
+
+    table.classList.remove("d-none");
+
+    if (side === "left") {
+        leftCols.forEach(el => el.style.display = "table-cell");
+        rightCols.forEach(el => el.style.display = "none");
+    } else if (side === "right") {
+        leftCols.forEach(el => el.style.display = "none");
+        rightCols.forEach(el => el.style.display = "table-cell");
+    } else {
+        leftCols.forEach(el => el.style.display = "table-cell");
+        rightCols.forEach(el => el.style.display = "table-cell");
+    }
 }
 
-function updateTable() {
-    let selectedLeftFinger = document.querySelector('input[name="left-finger"]:checked');
-    let selectedRightFinger = document.querySelector('input[name="right-finger"]:checked');
-    let tableContainer = document.getElementById("amputationTable");
-    let tableRows = document.getElementById("tableRows");
-    let leftHeader = document.getElementById("leftHeader");
-    let rightHeader = document.getElementById("rightHeader");
-    let leftColumns = document.querySelectorAll(".table-left");
-    let rightColumns = document.querySelectorAll(".table-right");
-
-    tableRows.innerHTML = "";
-    let leftFingers = [], rightFingers = [];
-    
-    if (selectedLeftFinger) {
-        leftFingers.push({
-            name: selectedLeftFinger.value.charAt(0).toUpperCase() + selectedLeftFinger.value.slice(1),
-            id: selectedLeftFinger.value.toLowerCase()
-        });
-    }
-    
-    if (selectedRightFinger) {
-        rightFingers.push({
-            name: selectedRightFinger.value.charAt(0).toUpperCase() + selectedRightFinger.value.slice(1),
-            id: selectedRightFinger.value.toLowerCase()
-        });
-    }
-
-    let selectedSide = document.querySelector('input[name="side"]:checked')?.value;
-    if (leftFingers.length === 0 && rightFingers.length === 0) {
-        tableContainer.classList.add("d-none");
-        return;
-    } else {
-        tableContainer.classList.remove("d-none");
-    }
-
-    if (selectedSide === "left") {
-        rightHeader.style.display = "none";
-        leftHeader.style.display = "table-cell";
-        rightColumns.forEach(col => col.style.display = "none");
-        leftColumns.forEach(col => col.style.display = "table-cell");
-    } else if (selectedSide === "right") {
-        leftHeader.style.display = "none";
-        rightHeader.style.display = "table-cell";
-        leftColumns.forEach(col => col.style.display = "none");
-        rightColumns.forEach(col => col.style.display = "table-cell");
-    } else {
-        leftHeader.style.display = "table-cell";
-        rightHeader.style.display = "table-cell";
-        leftColumns.forEach(col => col.style.display = "table-cell");
-        rightColumns.forEach(col => col.style.display = "table-cell");
-    }
-
-    let maxRows = Math.max(leftFingers.length, rightFingers.length);
-    for (let i = 0; i < maxRows; i++) {
-        let leftDigit = leftFingers[i] || { name: "", id: "" };
-        let rightDigit = rightFingers[i] || { name: "", id: "" };
-        let rowId = i + 1;
-
-        tableRows.innerHTML += `
-            <tr>
-                ${selectedSide !== "right" ? `
-                    <td>${leftDigit.name}</td>
-                    ${createTamaiDropdown('left', leftDigit.id, rowId)}
-                    ${createAllenDropdown('left', leftDigit.id, rowId)}
-                    <td><input type="text" id="left-${leftDigit.id}-pnb-${rowId}" class="form-control pnb-input" placeholder="e.g. 1-2-3" onkeyup="validatePNBInput(this)"></td>
-                ` : ""}
-                ${selectedSide !== "left" ? `
-                    <td>${rightDigit.name}</td>
-                    ${createTamaiDropdown('right', rightDigit.id, rowId)}
-                    ${createAllenDropdown('right', rightDigit.id, rowId)}
-                    <td><input type="text" id="right-${rightDigit.id}-pnb-${rowId}" class="form-control pnb-input" placeholder="e.g. 1-2-3" onkeyup="validatePNBInput(this)"></td>
-                ` : ""}
-            </tr>
-        `;
-    }
-
-    // Add event listeners after creating the inputs
-    document.querySelectorAll('.pnb-input').forEach(input => {
-        input.addEventListener('keydown', function(e) {
-            // Allow numbers, hyphens, and control keys (backspace, delete, arrows)
-            if (!/[\d\-]/.test(e.key) && 
-                e.key !== 'Backspace' && 
-                e.key !== 'Delete' && 
-                e.key !== 'ArrowLeft' && 
-                e.key !== 'ArrowRight' && 
-                e.key !== 'Tab') {
-                e.preventDefault();
-            }
+// Optional: basic validation for PNB input
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".pnb-input").forEach(input => {
+        input.addEventListener("input", () => {
+            input.value = input.value.replace(/[^\d\-]/g, "").replace(/^-+|-+$/g, "").replace(/--+/g, "-");
         });
     });
-}
+});
 
-function createTamaiDropdown(side, finger, rowId) {
-    return `<td><select id="${side}-${finger}-tamai-${rowId}" class="form-control">
-        <option value="">Select</option>
-        <option value="Zone1">Zone 1</option>
-        <option value="Zone2">Zone 2</option>
-    </select></td>`;
-}
 
-function createAllenDropdown(side, finger, rowId) {
-    return `<td><select id="${side}-${finger}-allen-${rowId}" class="form-control">
-        <option value="">Select</option>
-        <option value="Zone1">Zone 1</option>
-        <option value="Zone2">Zone 2</option>
-        <option value="Zone3">Zone 3</option>
-        <option value="Zone4">Zone 4</option>
-    </select></td>`;
-}
-
-function validatePNBInput(input) {
-    // Get current cursor position
-    let cursorPos = input.selectionStart;
-    let originalLength = input.value.length;
-    
-    // Only allow digits and hyphens
-    let value = input.value.replace(/[^\d\-]/g, '');
-    
-    // Process the input to ensure proper format
-    let parts = value.split('-').filter(part => part !== '');
-    
-    // Limit to 3 parts maximum
-    if (parts.length > 3) {
-        parts = parts.slice(0, 3);
-    }
-    
-    // Set the formatted value
-    let newValue = parts.join('-');
-    input.value = newValue;
-    
-    // Adjust cursor position if value changed
-    if (originalLength !== newValue.length) {
-        let adjustment = newValue.length - originalLength;
-        input.setSelectionRange(cursorPos + adjustment, cursorPos + adjustment);
-    }
-}
 </script>
+
 <hr style="border-top: 2px dotted black; width: 100%;">
 
 <div class="mb-3">
@@ -2406,46 +2441,21 @@ function validatePNBInput(input) {
         border-radius: 8px;
         background-color: #f9f9f9;
     }
-    .first_structure_wound_types_row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-    .first_structure_wound_type {
-        margin: 5px;
-        padding: 5px 10px;
-        background-color: #f0f0f0;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .first_structure_wound_details_container {
-        margin-top: 20px;
-    }
-    .first_structure_wound_details {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #fff;
-    }
-    .first_structure_wound_count {
-        width: 60px;
-        margin-top: 5px;
-    }
-    .first_structure_dimension_input {
-        width: 80px;
-        margin-right: 10px;
-    }
-    .first_structure_area_display {
-        font-weight: bold;
-        display: inline-block;
-        min-width: 80px;
-    }
+    
+    .first_structure_wound_details_section {
+    width: calc(25% - 20px); /* 4 per row, with some spacing */
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.first_structure_wound_details_section textarea {
+    width: 100%;
+    resize: vertical;
+    font-size: 14px;
+    padding: 5px;
+}
+
     .first_structure_hidden {
         display: none;
     }
@@ -2459,10 +2469,7 @@ function validatePNBInput(input) {
     label {
         font-weight: bold;
     }
-    .first_structure_wound_type_title {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
+    
     /* New styles for image preview */
     .image-preview-container {
         margin-top: 10px;
@@ -2502,90 +2509,51 @@ function validatePNBInput(input) {
             <div class="first_structure_image_upload">
                 <label for="first_structure_leftHandImage">Upload Image:</label>
                 <input type="file" id="first_structure_leftHandImage" accept="image/*" multiple onchange="previewImage('first_structure_leftHandImage', 'leftHandPreview')">
-                <!-- Added image preview container -->
                 <div class="image-preview-container">
                     <img id="leftHandPreview" class="image-preview" alt="Left hand image preview">
                     <p id="leftHandPreviewText">Image preview will appear here</p>
                 </div>
             </div>
             
-            <p><strong>Select Wound Types:</strong></p>
-            <div class="first_structure_wound_types_row">
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Laceration</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="laceration" id="lac1" onchange="first_structure_updateWoundCounts('left', 'laceration')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_laceration_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'laceration')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Contusion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="contusion" id="con1" onchange="first_structure_updateWoundCounts('left', 'contusion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_contusion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'contusion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Avulsion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="avulsion" id="avul1" onchange="first_structure_updateWoundCounts('left', 'avulsion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_avulsion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'avulsion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Incised</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="incised" id="in1" onchange="first_structure_updateWoundCounts('left', 'incised')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_incised_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'incised')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Abrasion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="abrasion" id="abr1" onchange="first_structure_updateWoundCounts('left', 'abrasion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_abrasion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'abrasion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Penetration</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="penetration" id="pene1" onchange="first_structure_updateWoundCounts('left', 'penetration')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_penetration_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'penetration')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Degloving</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="degloving" id="deg" onchange="first_structure_updateWoundCounts('left', 'degloving')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_degloving_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'degloving')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Crush</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_left_wound_type" value="crush" id="cru1" onchange="first_structure_updateWoundCounts('left', 'crush')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_left_crush_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('left', 'crush')">
-                </div>
+            <p><strong>Wound Types:</strong></p>
+            <div id="first_structure_left_laceration_details" class="first_structure_wound_details_section">
+                <label for="left_laceration_details">Laceration:</label>
+                <textarea id="left_laceration_details" rows="2" cols="50" placeholder="Describe laceration..."></textarea>
             </div>
-            
-            <div class="first_structure_wound_details_container">
-                <h3>Wound Details</h3>
-                <div id="first_structure_left_laceration_details"></div>
-                <div id="first_structure_left_contusion_details"></div>
-                <div id="first_structure_left_avulsion_details"></div>
-                <div id="first_structure_left_incised_details"></div>
-                <div id="first_structure_left_abrasion_details"></div>
-                <div id="first_structure_left_penetration_details"></div>
-                <div id="first_structure_left_degloving_details"></div>
-                <div id="first_structure_left_crush_details"></div>
+        
+            <div id="first_structure_left_contusion_details" class="first_structure_wound_details_section">
+                <label for="left_contusion_details">Contusion:</label>
+                <textarea id="left_contusion_details" rows="2" cols="50" placeholder="Describe contusion..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_avulsion_details" class="first_structure_wound_details_section">
+                <label for="left_avulsion_details">Avulsion:</label>
+                <textarea id="left_avulsion_details" rows="2" cols="50" placeholder="Describe avulsion..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_incised_details" class="first_structure_wound_details_section">
+                <label for="left_incised_details">Incised:</label>
+                <textarea id="left_incised_details" rows="2" cols="50" placeholder="Describe incised wound..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_abrasion_details" class="first_structure_wound_details_section">
+                <label for="left_abrasion_details">Abrasion:</label>
+                <textarea id="left_abrasion_details" rows="2" cols="50" placeholder="Describe abrasion..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_penetration_details" class="first_structure_wound_details_section">
+                <label for="left_penetration_details">Penetration:</label>
+                <textarea id="left_penetration_details" rows="2" cols="50" placeholder="Describe penetration..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_degloving_details" class="first_structure_wound_details_section">
+                <label for="left_degloving_details">Degloving:</label>
+                <textarea id="left_degloving_details" rows="2" cols="50" placeholder="Describe degloving..."></textarea>
+            </div>
+        
+            <div id="first_structure_left_crush_details" class="first_structure_wound_details_section">
+                <label for="left_crush_details">Crush:</label>
+                <textarea id="left_crush_details" rows="2" cols="50" placeholder="Describe crush injury..."></textarea>
             </div>
         </div>
         
@@ -2594,91 +2562,53 @@ function validatePNBInput(input) {
             <div class="first_structure_image_upload">
                 <label for="first_structure_rightHandImage">Upload Image:</label>
                 <input type="file" id="first_structure_rightHandImage" accept="image/*"  multiple onchange="previewImage('first_structure_rightHandImage', 'rightHandPreview')">
-                <!-- Added image preview container -->
                 <div class="image-preview-container">
                     <img id="rightHandPreview" class="image-preview" alt="Right hand image preview">
                     <p id="rightHandPreviewText">Image preview will appear here</p>
                 </div>
             </div>
             
-            <p><strong>Select Wound Types:</strong></p>
-            <div class="first_structure_wound_types_row">
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Laceration</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="laceration" id="lac2" onchange="first_structure_updateWoundCounts('right', 'laceration')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_laceration_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'laceration')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Contusion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="contusion" id="cont2" onchange="first_structure_updateWoundCounts('right', 'contusion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_contusion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'contusion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Avulsion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="avulsion" id="avul2" onchange="first_structure_updateWoundCounts('right', 'avulsion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_avulsion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'avulsion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Incised</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="incised" id="in2" onchange="first_structure_updateWoundCounts('right', 'incised')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_incised_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'incised')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Abrasion</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="abrasion" id="abr2" onchange="first_structure_updateWoundCounts('right', 'abrasion')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_abrasion_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'abrasion')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Penetration</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="penetration" id="pene2" onchange="first_structure_updateWoundCounts('right', 'penetration')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_penetration_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'penetration')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Degloving</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="degloving" id="deg2" onchange="first_structure_updateWoundCounts('right', 'degloving')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_degloving_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'degloving')">
-                </div>
-                
-                <div class="first_structure_wound_type">
-                    <span class="first_structure_wound_type_title">Crush</span>
-                    <label>
-                        <input type="checkbox" class="first_structure_right_wound_type" value="crush" id="cru2" onchange="first_structure_updateWoundCounts('right', 'crush')">
-                    </label>
-                    <input type="number" class="first_structure_wound_count first_structure_hidden" id="first_structure_right_crush_count" min="1" value="1" onchange="first_structure_createWoundDetailFields('right', 'crush')">
-                </div>
+            <p><strong>Wound Types:</strong></p>
+            <div id="first_structure_right_laceration_details" class="first_structure_wound_details_section">
+                <label for="right_laceration_details">Laceration:</label>
+                <textarea id="right_laceration_details" rows="2" cols="50" placeholder="Describe laceration..."></textarea>
             </div>
-            
-            <div class="first_structure_wound_details_container">
-                <h3>Wound Details</h3>
-                <div id="first_structure_right_laceration_details"></div>
-                <div id="first_structure_right_contusion_details"></div>
-                <div id="first_structure_right_avulsion_details"></div>
-                <div id="first_structure_right_incised_details"></div>
-                <div id="first_structure_right_abrasion_details"></div>
-                <div id="first_structure_right_penetration_details"></div>
-                <div id="first_structure_right_degloving_details"></div>
-                <div id="first_structure_right_crush_details"></div>
+        
+            <div id="first_structure_right_contusion_details" class="first_structure_wound_details_section">
+                <label for="right_contusion_details">Contusion:</label>
+                <textarea id="right_contusion_details" rows="2" cols="50" placeholder="Describe contusion..."></textarea>
             </div>
+        
+            <div id="first_structure_right_avulsion_details" class="first_structure_wound_details_section">
+                <label for="right_avulsion_details">Avulsion:</label>
+                <textarea id="right_avulsion_details" rows="2" cols="50" placeholder="Describe avulsion..."></textarea>
+            </div>
+        
+            <div id="first_structure_right_incised_details" class="first_structure_wound_details_section">
+                <label for="right_incised_details">Incised:</label>
+                <textarea id="right_incised_details" rows="2" cols="50" placeholder="Describe incised wound..."></textarea>
+            </div>
+        
+            <div id="first_structure_right_abrasion_details" class="first_structure_wound_details_section">
+                <label for="right_abrasion_details">Abrasion:</label>
+                <textarea id="right_abrasion_details" rows="2" cols="50" placeholder="Describe abrasion..."></textarea>
+            </div>
+        
+            <div id="first_structure_right_penetration_details" class="first_structure_wound_details_section">
+                <label for="right_penetration_details">Penetration:</label>
+                <textarea id="right_penetration_details" rows="2" cols="50" placeholder="Describe penetration..."></textarea>
+            </div>
+        
+            <div id="first_structure_right_degloving_details" class="first_structure_wound_details_section">
+                <label for="right_degloving_details">Degloving:</label>
+                <textarea id="right_degloving_details" rows="2" cols="50" placeholder="Describe degloving..."></textarea>
+            </div>
+        
+            <div id="first_structure_right_crush_details" class="first_structure_wound_details_section">
+                <label for="right_crush_details">Crush:</label>
+                <textarea id="right_crush_details" rows="2" cols="50" placeholder="Describe crush injury..."></textarea>
+            </div>
+           
         </div>
     </div>
     <script>
@@ -2687,7 +2617,6 @@ function validatePNBInput(input) {
             const first_structure_selectedHand = document.querySelector('input[name="first_structure_hand"]:checked').value;
             const first_structure_leftContainer = document.getElementById('first_structure_leftHandContainer');
             const first_structure_rightContainer = document.getElementById('first_structure_rightHandContainer');
-            
             
             first_structure_leftContainer.classList.add('first_structure_hidden');
             first_structure_rightContainer.classList.add('first_structure_hidden');
@@ -2701,88 +2630,32 @@ function validatePNBInput(input) {
             } else if (first_structure_selectedHand === 'both') {
                 first_structure_leftContainer.classList.remove('first_structure_hidden');
                 first_structure_rightContainer.classList.remove('first_structure_hidden');
-                
             }
         }
         
-        // Show/hide wound count input when a wound type is selected
-        function first_structure_updateWoundCounts(first_structure_hand, first_structure_type) {
-            const first_structure_checkbox = document.querySelector(`.first_structure_${first_structure_hand}_wound_type[value="${first_structure_type}"]`);
-            const first_structure_countInput = document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_count`);
-            const first_structure_detailsContainer = document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_details`);
-            
-            if (first_structure_checkbox.checked) {
-                first_structure_countInput.classList.remove('first_structure_hidden');
-                first_structure_createWoundDetailFields(first_structure_hand, first_structure_type);
-            } else {
-                first_structure_countInput.classList.add('first_structure_hidden');
-                first_structure_detailsContainer.innerHTML = '';
-            }
-        }
         
-        // Create detail fields for each wound
-        function first_structure_createWoundDetailFields(first_structure_hand, first_structure_type) {
-            const first_structure_count = parseInt(document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_count`).value);
-            const first_structure_detailsContainer = document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_details`);
-            
-            first_structure_detailsContainer.innerHTML = '';
-            
-            for (let i = 1; i <= first_structure_count; i++) {
-                const first_structure_detailDiv = document.createElement('div');
-                first_structure_detailDiv.className = 'first_structure_wound_details';
-                first_structure_detailDiv.innerHTML = `
-                    <p><strong>${first_structure_type.charAt(0).toUpperCase() + first_structure_type.slice(1)} #${i}</strong></p>
-                    <div>
-                        <label for="first_structure_${first_structure_hand}_${first_structure_type}_${i}_length">Length (cm):</label>
-                        <input type="number" id="first_structure_${first_structure_hand}_${first_structure_type}_${i}_length" 
-                               class="first_structure_dimension_input" step="0.1" min="0" value="0" 
-                               oninput="first_structure_calculateArea('${first_structure_hand}', '${first_structure_type}', ${i})">
-                        
-                        <label for="first_structure_${first_structure_hand}_${first_structure_type}_${i}_breadth">Breadth (cm):</label>
-                        <input type="number" id="first_structure_${first_structure_hand}_${first_structure_type}_${i}_breadth" 
-                               class="first_structure_dimension_input" step="0.1" min="0" value="0" 
-                               oninput="first_structure_calculateArea('${first_structure_hand}', '${first_structure_type}', ${i})">
-                        
-                        <label>Area:</label>
-                        <span id="first_structure_${first_structure_hand}_${first_structure_type}_${i}_area" class="first_structure_area_display">0 cm²</span>
-                    </div>
-                `;
-                first_structure_detailsContainer.appendChild(first_structure_detailDiv);
-            }
-        }
-        
-        // Calculate area automatically
-        function first_structure_calculateArea(first_structure_hand, first_structure_type, first_structure_index) {
-            const first_structure_length = parseFloat(document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_${first_structure_index}_length`).value) || 0;
-            const first_structure_breadth = parseFloat(document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_${first_structure_index}_breadth`).value) || 0;
-            const first_structure_area = first_structure_length * first_structure_breadth;
-            
-            document.getElementById(`first_structure_${first_structure_hand}_${first_structure_type}_${first_structure_index}_area`).textContent = `${first_structure_area.toFixed(2)} cm²`;
-        }
-        
-        // New function to preview uploaded images
         // Preview image function  
-    function previewImage(inputId, previewId) {  
-        const fileInput = document.getElementById(inputId);  
-        const previewImg = document.getElementById(previewId);  
-        const previewText = previewImg.nextElementSibling;  
-    
-        if (fileInput.files && fileInput.files[0]) {  
-            const reader = new FileReader();  
-    
-            reader.onload = function(e) {  
-                previewImg.src = e.target.result;  
-                previewImg.style.display = 'block';  
-                previewText.style.display = 'none';  
-            };  
-    
-            reader.readAsDataURL(fileInput.files[0]);  
-        } else {  
-            previewImg.src = '';  
-            previewImg.style.display = 'none';  
-            previewText.style.display = 'block';  
-        }  
-    } 
+        function previewImage(inputId, previewId) {  
+            const fileInput = document.getElementById(inputId);  
+            const previewImg = document.getElementById(previewId);  
+            const previewText = previewImg.nextElementSibling;  
+        
+            if (fileInput.files && fileInput.files[0]) {  
+                const reader = new FileReader();  
+        
+                reader.onload = function(e) {  
+                    previewImg.src = e.target.result;  
+                    previewImg.style.display = 'block';  
+                    previewText.style.display = 'none';  
+                };  
+        
+                reader.readAsDataURL(fileInput.files[0]);  
+            } else {  
+                previewImg.src = '';  
+                previewImg.style.display = 'none';  
+                previewText.style.display = 'block';  
+            }  
+        }
     </script>
 <hr style="border-top: 2px dotted black; width: 100%;">
 
@@ -2800,46 +2673,7 @@ function validatePNBInput(input) {
         border-radius: 8px;
         background-color: #f9f9f9;
     }
-    .second_structure_wound_types_row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-    .second_structure_wound_type {
-        margin: 5px;
-        padding: 5px 10px;
-        background-color: #f0f0f0;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .second_structure_wound_details_container {
-        margin-top: 20px;
-    }
-    .second_structure_wound_details {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background-color: #fff;
-    }
-    .second_structure_wound_count {
-        width: 60px;
-        margin-top: 5px;
-    }
-    .second_structure_dimension_input {
-        width: 80px;
-        margin-right: 10px;
-    }
-    .second_structure_area_display {
-        font-weight: bold;
-        display: inline-block;
-        min-width: 80px;
-    }
+    
     .second_structure_hidden {
         display: none;
     }
@@ -2852,10 +2686,6 @@ function validatePNBInput(input) {
     }
     label {
         font-weight: bold;
-    }
-    .second_structure_wound_type_title {
-        font-weight: bold;
-        margin-bottom: 5px;
     }
     /* Styles for image preview */
     .image-preview-container {
@@ -2919,84 +2749,49 @@ function validatePNBInput(input) {
             </div>
             
             <p><strong>Select Wound Types:</strong></p>
-            <div class="second_structure_wound_types_row">
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Laceration</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="laceration" onchange="second_structure_updateWoundCounts('left', 'laceration')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_laceration_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'laceration')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Contusion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="contusion" onchange="second_structure_updateWoundCounts('left', 'contusion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_contusion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'contusion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Avulsion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="avulsion" onchange="second_structure_updateWoundCounts('left', 'avulsion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_avulsion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'avulsion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Incised</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="incised" onchange="second_structure_updateWoundCounts('left', 'incised')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_incised_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'incised')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Abrasion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="abrasion" onchange="second_structure_updateWoundCounts('left', 'abrasion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_abrasion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'abrasion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Penetration</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="penetration" onchange="second_structure_updateWoundCounts('left', 'penetration')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_penetration_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'penetration')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Degloving</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="degloving" onchange="second_structure_updateWoundCounts('left', 'degloving')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_degloving_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'degloving')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Crush</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_left_wound_type" value="crush" onchange="second_structure_updateWoundCounts('left', 'crush')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_left_crush_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('left', 'crush')">
-                </div>
+            <div id="second_structure_left_laceration_details" class="first_structure_wound_details_section">
+                <label for="left_laceration_details">Laceration:</label>
+                <textarea id="left_laceration_details1" rows="2" cols="50" placeholder="Describe laceration..."></textarea>
             </div>
-            
-            <div class="second_structure_wound_details_container">
-                <h3>Wound Details</h3>
-                <div id="second_structure_left_laceration_details"></div>
-                <div id="second_structure_left_contusion_details"></div>
-                <div id="second_structure_left_avulsion_details"></div>
-                <div id="second_structure_left_incised_details"></div>
-                <div id="second_structure_left_abrasion_details"></div>
-                <div id="second_structure_left_penetration_details"></div>
-                <div id="second_structure_left_degloving_details"></div>
-                <div id="second_structure_left_crush_details"></div>
+        
+            <div id="second_structure_left_contusion_details" class="first_structure_wound_details_section">
+                <label for="left_contusion_details">Contusion:</label>
+                <textarea id="left_contusion_details1" rows="2" cols="50" placeholder="Describe contusion..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_avulsion_details" class="first_structure_wound_details_section">
+                <label for="left_avulsion_details">Avulsion:</label>
+                <textarea id="left_avulsion_details1" rows="2" cols="50" placeholder="Describe avulsion..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_incised_details" class="first_structure_wound_details_section">
+                <label for="left_incised_details">Incised:</label>
+                <textarea id="left_incised_details1" rows="2" cols="50" placeholder="Describe incised wound..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_abrasion_details" class="first_structure_wound_details_section">
+                <label for="left_abrasion_details">Abrasion:</label>
+                <textarea id="left_abrasion_details1" rows="2" cols="50" placeholder="Describe abrasion..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_penetration_details" class="first_structure_wound_details_section">
+                <label for="left_penetration_details">Penetration:</label>
+                <textarea id="left_penetration_details1" rows="2" cols="50" placeholder="Describe penetration..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_degloving_details" class="first_structure_wound_details_section">
+                <label for="left_degloving_details">Degloving:</label>
+                <textarea id="left_degloving_details1" rows="2" cols="50" placeholder="Describe degloving..."></textarea>
+            </div>
+        
+            <div id="second_structure_left_crush_details" class="first_structure_wound_details_section">
+                <label for="left_crush_details">Crush:</label>
+                <textarea id="left_crush_details1" rows="2" cols="50" placeholder="Describe crush injury..."></textarea>
             </div>
         </div>
+            
+            
+
         
         <div id="second_structure_rightForearmContainer" class="second_structure_forearm_container second_structure_hidden">
             <h2>Right Forearm</h2>
@@ -3010,83 +2805,47 @@ function validatePNBInput(input) {
             </div>
             
             <p><strong>Select Wound Types:</strong></p>
-            <div class="second_structure_wound_types_row">
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Laceration</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="laceration" onchange="second_structure_updateWoundCounts('right', 'laceration')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_laceration_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'laceration')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Contusion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="contusion" onchange="second_structure_updateWoundCounts('right', 'contusion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_contusion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'contusion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Avulsion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="avulsion" onchange="second_structure_updateWoundCounts('right', 'avulsion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_avulsion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'avulsion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Incised</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="incised" onchange="second_structure_updateWoundCounts('right', 'incised')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_incised_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'incised')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Abrasion</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="abrasion" onchange="second_structure_updateWoundCounts('right', 'abrasion')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_abrasion_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'abrasion')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Penetration</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="penetration" onchange="second_structure_updateWoundCounts('right', 'penetration')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_penetration_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'penetration')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Degloving</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="degloving" onchange="second_structure_updateWoundCounts('right', 'degloving')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_degloving_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'degloving')">
-                </div>
-                
-                <div class="second_structure_wound_type">
-                    <span class="second_structure_wound_type_title">Crush</span>
-                    <label>
-                        <input type="checkbox" class="second_structure_right_wound_type" value="crush" onchange="second_structure_updateWoundCounts('right', 'crush')">
-                    </label>
-                    <input type="number" class="second_structure_wound_count second_structure_hidden" id="second_structure_right_crush_count" min="1" value="1" onchange="second_structure_createWoundDetailFields('right', 'crush')">
-                </div>
+            <div id="second_structure_right_laceration_details" class="first_structure_wound_details_section">
+                <label for="right_laceration_details">Laceration:</label>
+                <textarea id="right_laceration_details1" rows="2" cols="50" placeholder="Describe laceration..."></textarea>
             </div>
-            
-            <div class="second_structure_wound_details_container">
-                <h3>Wound Details</h3>
-                <div id="second_structure_right_laceration_details"></div>
-                <div id="second_structure_right_contusion_details"></div>
-                <div id="second_structure_right_avulsion_details"></div>
-                <div id="second_structure_right_incised_details"></div>
-                <div id="second_structure_right_abrasion_details"></div>
-                <div id="second_structure_right_penetration_details"></div>
-                <div id="second_structure_right_degloving_details"></div>
-                <div id="second_structure_right_crush_details"></div>
+        
+            <div id="second_structure_right_contusion_details" class="first_structure_wound_details_section">
+                <label for="right_contusion_details">Contusion:</label>
+                <textarea id="right_contusion_details1" rows="2" cols="50" placeholder="Describe contusion..."></textarea>
             </div>
+        
+            <div id="second_structure_right_avulsion_details" class="first_structure_wound_details_section">
+                <label for="right_avulsion_details">Avulsion:</label>
+                <textarea id="right_avulsion_details1" rows="2" cols="50" placeholder="Describe avulsion..."></textarea>
+            </div>
+        
+            <div id="second_structure_right_incised_details" class="first_structure_wound_details_section">
+                <label for="right_incised_details">Incised:</label>
+                <textarea id="right_incised_details1" rows="2" cols="50" placeholder="Describe incised wound..."></textarea>
+            </div>
+        
+            <div id="second_structure_right_abrasion_details" class="first_structure_wound_details_section">
+                <label for="right_abrasion_details">Abrasion:</label>
+                <textarea id="right_abrasion_details1" rows="2" cols="50" placeholder="Describe abrasion..."></textarea>
+            </div>
+        
+            <div id="second_structure_right_penetration_details" class="first_structure_wound_details_section">
+                <label for="right_penetration_details">Penetration:</label>
+                <textarea id="right_penetration_details1" rows="2" cols="50" placeholder="Describe penetration..."></textarea>
+            </div>
+        
+            <div id="second_structure_right_degloving_details" class="first_structure_wound_details_section">
+                <label for="right_degloving_details">Degloving:</label>
+                <textarea id="right_degloving_details1" rows="2" cols="50" placeholder="Describe degloving..."></textarea>
+            </div>
+        
+            <div id="second_structure_right_crush_details" class="first_structure_wound_details_section">
+                <label for="right_crush_details">Crush:</label>
+                <textarea id="right_crush_details1" rows="2" cols="50" placeholder="Describe crush injury..."></textarea>
+            </div>
+        </div>
+    </div>
         </div>
     </div>
     
@@ -3136,60 +2895,6 @@ function validatePNBInput(input) {
             }
         }
         
-        // Show/hide wound count input when a wound type is selected
-        function second_structure_updateWoundCounts(second_structure_side, second_structure_type) {
-            const second_structure_checkbox = document.querySelector(`.second_structure_${second_structure_side}_wound_type[value="${second_structure_type}"]`);
-            const second_structure_countInput = document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_count`);
-            const second_structure_detailsContainer = document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_details`);
-            
-            if (second_structure_checkbox.checked) {
-                second_structure_countInput.classList.remove('second_structure_hidden');
-                second_structure_createWoundDetailFields(second_structure_side, second_structure_type);
-            } else {
-                second_structure_countInput.classList.add('second_structure_hidden');
-                second_structure_detailsContainer.innerHTML = '';
-            }
-        }
-        
-        // Create detail fields for each wound
-        function second_structure_createWoundDetailFields(second_structure_side, second_structure_type) {
-            const second_structure_count = parseInt(document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_count`).value);
-            const second_structure_detailsContainer = document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_details`);
-            
-            second_structure_detailsContainer.innerHTML = '';
-            
-            for (let i = 1; i <= second_structure_count; i++) {
-                const second_structure_detailDiv = document.createElement('div');
-                second_structure_detailDiv.className = 'second_structure_wound_details';
-                second_structure_detailDiv.innerHTML = `
-                    <p><strong>${second_structure_type.charAt(0).toUpperCase() + second_structure_type.slice(1)} #${i}</strong></p>
-                    <div>
-                        <label for="second_structure_${second_structure_side}_${second_structure_type}_${i}_length">Length (cm):</label>
-                        <input type="number" id="second_structure_${second_structure_side}_${second_structure_type}_${i}_length" 
-                               class="second_structure_dimension_input" step="0.1" min="0" value="0" 
-                               oninput="second_structure_calculateArea('${second_structure_side}', '${second_structure_type}', ${i})">
-                        
-                        <label for="second_structure_${second_structure_side}_${second_structure_type}_${i}_breadth">Breadth (cm):</label>
-                        <input type="number" id="second_structure_${second_structure_side}_${second_structure_type}_${i}_breadth" 
-                               class="second_structure_dimension_input" step="0.1" min="0" value="0" 
-                               oninput="second_structure_calculateArea('${second_structure_side}', '${second_structure_type}', ${i})">
-                        
-                        <label>Area:</label>
-                        <span id="second_structure_${second_structure_side}_${second_structure_type}_${i}_area" class="second_structure_area_display">0 cm²</span>
-                    </div>
-                `;
-                second_structure_detailsContainer.appendChild(second_structure_detailDiv);
-            }
-        }
-        
-        // Calculate area automatically
-        function second_structure_calculateArea(second_structure_side, second_structure_type, second_structure_index) {
-            const second_structure_length = parseFloat(document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_${second_structure_index}_length`).value) || 0;
-            const second_structure_breadth = parseFloat(document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_${second_structure_index}_breadth`).value) || 0;
-            const second_structure_area = second_structure_length * second_structure_breadth;
-            
-            document.getElementById(`second_structure_${second_structure_side}_${second_structure_type}_${second_structure_index}_area`).textContent = `${second_structure_area.toFixed(2)} cm²`;
-        }
         
         // Function to preview uploaded images
         function second_structure_previewImage(inputId, previewId) {
@@ -3218,6 +2923,81 @@ function validatePNBInput(input) {
         }
     </script>
 <hr style="border-top: 2px dotted black; width: 100%;">
+<style>
+    .flexor-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .flexor-radio-group {
+        margin-top: 10px;
+    }
+    
+    .flexor-radio-group input[type="radio"] {
+        margin-right: 5px;
+    }
+    
+    .flexor-radio-group label {
+        margin-right: 15px;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .flexor-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .flexor-hand-box {
+        flex: 1;
+        min-width: 400px;
+        margin-right: 20px;
+    }
+    
+    .flexor-hand-image {
+    width: 450px; /* Or whatever width you prefer */
+    height: auto; /* Keeps aspect ratio */
+}
+    
+    .hand-selection {
+        flex: 2;
+        min-width: 300px;
+    }
+    
+    .zone-table {
+    width: 40%; /* Reduce from 100% */
+    max-width: 300px; /* Add a maximum width */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+    
+    .zone-table th, .zone-table td {
+        padding: 6px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .zone-table th {
+        background-color: #f2f2f2;
+    }
+    
+    .zone-name {
+        font-weight: bold;
+        width: 30px;
+    }
+    
+    .finger-dropdown {
+        width: 55px;
+    }
+    
+    .finger-header {
+        text-align: center;
+    }
+</style>
 <div class="flexor-section">
     <label>Is there a Flexor Tendon Injury?</label>
     <div class="flexor-radio-group">
@@ -3232,13 +3012,13 @@ function validatePNBInput(input) {
 <div class="flexor-section hidden" id="flexorHandSelectionSection">
     <label>Select Hand:</label>
     <div class="flexor-radio-group">
-        <input type="radio" id="flexorLeftHand" name="flexorHandSelection" value="left" onclick="showFlexorHandImage()">
+        <input type="radio" id="flexorLeftHand" name="flexorHandSelection" value="left" onclick="showFlexorHandImage('left')">
         <label for="flexorLeftHand">Left</label>
 
-        <input type="radio" id="flexorRightHand" name="flexorHandSelection" value="right" onclick="showFlexorHandImage()">
+        <input type="radio" id="flexorRightHand" name="flexorHandSelection" value="right" onclick="showFlexorHandImage('right')">
         <label for="flexorRightHand">Right</label>
 
-        <input type="radio" id="flexorBothHands" name="flexorHandSelection" value="both" onclick="showFlexorHandImage()">
+        <input type="radio" id="flexorBothHands" name="flexorHandSelection" value="both" onclick="showFlexorHandImage('both')">
         <label for="flexorBothHands">Both</label>
     </div>
 </div>
@@ -3246,387 +3026,911 @@ function validatePNBInput(input) {
 <div class="flexor-section hidden" id="flexorHandImageSection">
     <div class="flexor-flexbox">
         <div class="flexor-hand-box">
-            <img id="flexorHandMainImage" src="https://res.cloudinary.com/dreh6wst7/image/upload/databaseimages/cdunypdre4wvximftyoo.png" class="flexor-hand-image" alt="Hand Image">
+            <img id="flexorHandMainImage" src="https://res.cloudinary.com/dreh6wst7/image/upload/databaseimages/bvxvc5ayj4kmgczmzrhn.png" class="flexor-hand-image" alt="Hand Image">
         </div>
 
-        <div id="bothHandSelection" class="both-hands-container hidden">
-            <div class="hand-selection">
-                <h3>Left Hand</h3>
-                <div class="zone-selection-container">
-                    <div class="zone-options">
-                        <div id="leftHandZoneOptions"></div>
-                    </div>
-                    <div class="finger-options">
-                        <div id="leftHandFingerOptions"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="hand-selection">
-                <h3>Right Hand</h3>
-                <div class="zone-selection-container">
-                    <div class="zone-options">
-                        <div id="rightHandZoneOptions"></div>
-                    </div>
-                    <div class="finger-options">
-                        <div id="rightHandFingerOptions"></div>
-                    </div>
-                </div>
+        <div id="leftHandSelection" class="hand-selection hidden">
+            <h3>Left Hand</h3>
+            <div>
+                <table class="zone-table">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header">Index</th>
+                            <th class="finger-header">Middle</th>
+                            <th class="finger-header">Ring</th>
+                            <th class="finger-header">Little</th>
+                            <th class="finger-header">Palm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">1</td>
+                            <td><select class="finger-dropdown" id="left_zone1_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone1_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone1_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone1_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone1_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">2</td>
+                            <td><select class="finger-dropdown" id="left_zone2_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone2_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone2_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone2_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone2_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">3</td>
+                            <td><select class="finger-dropdown" id="left_zone3_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone3_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone3_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone3_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone3_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">4</td>
+                            <td><select class="finger-dropdown" id="left_zone4_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone4_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone4_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone4_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone4_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">5</td>
+                            <td><select class="finger-dropdown" id="left_zone5_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone5_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone5_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone5_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_zone5_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4 style="margin-top: 20px;">Thumb Zones</h4>
+                <table class="zone-table">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header">T1</th>
+                            <th class="finger-header">T2</th>
+                            <th class="finger-header">T3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">THUMB</td>
+                            <td><select class="finger-dropdown" id="left_thumb_t1">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_thumb_t2">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="left_thumb_t3">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div id="singleHandSelection" class="hand-selection">
-            <h3 id="handTitle"></h3>
-            <div class="zone-selection-container">
-                <div class="zone-options">
-                    <div id="singleHandZoneOptions"></div>
-                </div>
-                <div class="finger-options">
-                    <div id="singleHandFingerOptions"></div>
-                </div>
+        <div id="rightHandSelection" class="hand-selection hidden">
+            <h3>Right Hand</h3>
+            <div>
+                <table class="zone-table">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header">Index</th>
+                            <th class="finger-header">Middle</th>
+                            <th class="finger-header">Ring</th>
+                            <th class="finger-header">Little</th>
+                            <th class="finger-header">Palm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">1</td>
+                            <td><select class="finger-dropdown" id="right_zone1_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone1_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone1_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone1_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone1_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">2</td>
+                            <td><select class="finger-dropdown" id="right_zone2_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone2_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone2_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone2_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone2_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">3</td>
+                            <td><select class="finger-dropdown" id="right_zone3_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone3_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone3_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone3_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone3_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">4</td>
+                            <td><select class="finger-dropdown" id="right_zone4_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone4_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone4_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone4_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone4_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td class="zone-name">5</td>
+                            <td><select class="finger-dropdown" id="right_zone5_index">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone5_middle">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone5_ring">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone5_little">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_zone5_palm">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4 style="margin-top: 20px;">Thumb Zones</h4>
+                <table class="zone-table">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header">T1</th>
+                            <th class="finger-header">T2</th>
+                            <th class="finger-header">T3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">THUMB</td>
+                            <td><select class="finger-dropdown" id="right_thumb_t1">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_thumb_t2">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown" id="right_thumb_t3">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
-
-<style>
-.zone-selection-container {
-    display: flex;
-}
-.zone-options {
-    flex: 1;
-    padding-right: 20px;
-}
-.finger-options {
-    flex: 2;
-}
-.finger-selection-box {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.hidden {
-    display: none;
-}
-.thumb-zones {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.radio-option {
-    margin-bottom: 5px;
-}
-.zones-section, .thumb-section {
-    margin-bottom: 15px;
-}
-</style>
-
 <script>
     function toggleFlexorHandSelection(isInjuryPresent) {
         document.getElementById("flexorHandSelectionSection").classList.toggle("hidden", !isInjuryPresent);
         document.getElementById("flexorHandImageSection").classList.add("hidden");
+        document.getElementById("leftHandSelection").classList.add("hidden");
+        document.getElementById("rightHandSelection").classList.add("hidden");
     }
 
-    function showFlexorHandImage() {
-        const selectedHand = document.querySelector('input[name="flexorHandSelection"]:checked').value;
+    function showFlexorHandImage(selectedHand) {
         document.getElementById("flexorHandImageSection").classList.remove("hidden");
 
-        if (selectedHand === "both") {
-            document.getElementById("singleHandSelection").classList.add("hidden");
-            document.getElementById("bothHandSelection").classList.remove("hidden");
-            document.getElementById("leftHandZoneOptions").innerHTML = generateZoneOptionsHTML("left");
-            document.getElementById("rightHandZoneOptions").innerHTML = generateZoneOptionsHTML("right");
-            document.getElementById("leftHandFingerOptions").innerHTML = generateFingerOptionsHTML("left");
-            document.getElementById("rightHandFingerOptions").innerHTML = generateFingerOptionsHTML("right");
-        } else {
-            document.getElementById("bothHandSelection").classList.add("hidden");
-            document.getElementById("singleHandSelection").classList.remove("hidden");
-            document.getElementById("handTitle").innerText = selectedHand.charAt(0).toUpperCase() + selectedHand.slice(1) + " Hand";
-            document.getElementById("singleHandZoneOptions").innerHTML = generateZoneOptionsHTML(selectedHand);
-            document.getElementById("singleHandFingerOptions").innerHTML = generateFingerOptionsHTML(selectedHand);
-        }
-    }
+        // Hide both selections first
+        document.getElementById("leftHandSelection").classList.add("hidden");
+        document.getElementById("rightHandSelection").classList.add("hidden");
 
-    function generateZoneOptionsHTML(hand) {
-        return `
-            <div class="zones-section">
-                <h4>Select Zones:</h4>
-                <div class="flexor-radio-group">
-                    ${['zone1', 'zone2', 'zone3', 'zone4', 'zone5'].map(zone => `
-                        <div class="radio-option">
-                            <input type="checkbox" id="${hand}${zone}" name="${hand}Zones" value="${zone}" onclick="toggleFingerSelection('${hand}', '${zone}')">
-                            <label for="${hand}${zone}">${zone.toUpperCase()}</label>
-                        </div>
-                    `).join('')}
-                    <div class="radio-option">
-                        <input type="checkbox" id="${hand}Thumb" name="${hand}Zones" value="thumb" onclick="toggleThumbSelection('${hand}')">
-                        <label for="${hand}Thumb">THUMB</label>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    function generateFingerOptionsHTML(hand) {
-        let html = '';
-        const zones = ['zone1', 'zone2', 'zone3', 'zone4', 'zone5'];
+        // Show the appropriate selections based on the hand choice
+        if (selectedHand === "left" || selectedHand === "both") {
+            document.getElementById("leftHandSelection").classList.remove("hidden");
+        }
         
-        zones.forEach(zone => {
-            html += `
-                <div id="${hand}${zone}FingerSelection" class="finger-selection-box hidden">
-                    <h4>${zone.toUpperCase()} Finger Selection:</h4>
-                    <div class="flexor-radio-group">
-                        ${['index', 'middle', 'ring', 'little', 'palm'].map(finger => `
-                            <div class="radio-option">
-                                <input type="checkbox" id="${hand}${zone}${finger}" name="${hand}${zone}Fingers" value="${finger}">
-                                <label for="${hand}${zone}${finger}">${finger.toUpperCase()}</label>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        });
-        
-        html += `
-            <div id="${hand}ThumbFingerSelection" class="finger-selection-box hidden">
-                <h4>Thumb Selection:</h4>
-                <div class="flexor-radio-group">
-                    ${['T1', 'T2', 'T3'].map(thumbZone => `
-                        <div class="radio-option">
-                            <input type="checkbox" id="${hand}Thumb${thumbZone}" name="${hand}ThumbFingers" value="${thumbZone}">
-                            <label for="${hand}Thumb${thumbZone}">${thumbZone}</label>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-        
-        return html;
-    }
-    
-    function toggleFingerSelection(hand, zone) {
-        const zoneElement = document.getElementById(`${hand}${zone}`);
-        const fingerSection = document.getElementById(`${hand}${zone}FingerSelection`);
-        
-        if (zoneElement.checked) {
-            fingerSection.classList.remove("hidden");
-        } else {
-            fingerSection.classList.add("hidden");
+        if (selectedHand === "right" || selectedHand === "both") {
+            document.getElementById("rightHandSelection").classList.remove("hidden");
         }
     }
-    
-    function toggleThumbSelection(hand) {
-        const thumbElement = document.getElementById(`${hand}Thumb`);
-        const thumbSection = document.getElementById(`${hand}ThumbFingerSelection`);
-        
-        if (thumbElement.checked) {
-            thumbSection.classList.remove("hidden");
-        } else {
-            thumbSection.classList.add("hidden");
-        }
-    }
-</script>
+    </script>
 
 
 <hr style="border-top: 2px dotted black; width: 100%;">
+<style>
+    .extensor-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .extensor-radio-group {
+        margin-top: 10px;
+    }
+    
+    .extensor-radio-group input[type="radio"] {
+        margin-right: 5px;
+    }
+    
+    .extensor-radio-group label {
+        margin-right: 15px;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .extensor-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .extensor-hand-box {
+        flex: 1;
+        min-width: 470px;
+        margin-right: 20px;
+    }
+    
+    .extensor-hand-image {
+    width: 450px; /* Or whatever width you prefer */
+    height: auto; /* Keeps aspect ratio */
+}
 
-<div class="extensor-container">
-    <div class="extensor-section">
-        <label>Is there an Extensor Tendon Injury?</label>
-        <div class="extensor-radio-group">
-            <input type="radio" id="extensorInjuryYes" name="extensorInjuryStatus" value="yes" onclick="toggleExtensorHandSelection(true)">
-            <label for="extensorInjuryYes">Yes</label>
+    
+    .hand-selection {
+        flex: 2;
+        min-width: 300px;
+    }
+    
+    .zone-table1 {
+    width: 90%; /* Reduce from 100% */
+    max-width: 450px; /* Add a maximum width */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+    
+    .zone-table1 th, .zone-table1 td {
+        padding: 6px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .zone-table1 th {
+        background-color: #f2f2f2;
+    }
+    
+    .zone-name1 {
+        font-weight: bold;
+        width: 70px;
+    }
+    .zone-name2 {
+        font-weight: bold;
+        width: 70px;
+    }
+    .finger-dropdown1 {
+        width: 60px;
+    }
+    
+    .finger-header1 {
+        text-align: center;
+    }
+</style>
+<div class="extensor-section">
+    <label>Is there a Extensor Tendon Injury?</label>
+    <div class="extensor-radio-group">
+        <input type="radio" id="extensorInjuryYes" name="extensorInjuryStatus" value="yes" onclick="toggleExtensorHandSelection(true)">
+        <label for="extensorInjuryYes">Yes</label>
 
-            <input type="radio" id="extensorInjuryNo" name="extensorInjuryStatus" value="no" onclick="toggleExtensorHandSelection(false)">
-            <label for="extensorInjuryNo">No</label>
-        </div>
+        <input type="radio" id="extensorInjuryNo" name="extensorInjuryStatus" value="no" onclick="toggleExtensorHandSelection(false)">
+        <label for="entensorInjuryNo">No</label>
     </div>
+</div>
 
-    <div class="extensor-section hidden" id="extensorHandSelectionSection">
-        <label>Select Hand:</label>
-        <div class="extensor-radio-group">
-            <input type="radio" id="extensorLeftHand" name="extensorHandSelection" value="left" onclick="showExtensorHandImage()">
-            <label for="extensorLeftHand">Left</label>
+<div class="extensor-section hidden" id="extensorHandSelectionSection">
+    <label>Select Hand:</label>
+    <div class="extensor-radio-group">
+        <input type="radio" id="extensorLeftHand" name="extensorHandSelection" value="left" onclick="showExtensorHandImage('left')">
+        <label for="extensorLeftHand">Left</label>
 
-            <input type="radio" id="extensorRightHand" name="extensorHandSelection" value="right" onclick="showExtensorHandImage()">
-            <label for="extensorRightHand">Right</label>
+        <input type="radio" id="extensorRightHand" name="extensorHandSelection" value="right" onclick="showExtensorHandImage('right')">
+        <label for="extensorRightHand">Right</label>
 
-            <input type="radio" id="extensorBothHands" name="extensorHandSelection" value="both" onclick="showExtensorHandImage()">
-            <label for="extensorBothHands">Both</label>
-        </div>
+        <input type="radio" id="extensorBothHands" name="extensorHandSelection" value="both" onclick="showExtensorHandImage('both')">
+        <label for="extensorBothHands">Both</label>
     </div>
+</div>
 
-    <div class="extensor-section hidden" id="extensorHandImageSection">
-        <div class="extensor-flexbox">
-            <div class="extensor-hand-box">
-                <img id="extensorHandMainImage" src="https://res.cloudinary.com/dreh6wst7/image/upload/databaseimages/iqjkxycaor1f6h8jmxz3.png" class="extensor-hand-image" alt="Hand Image">
-            </div>
+<div class="extensor-section hidden" id="extensorHandImageSection">
+    <div class="extensor-flexbox">
+        <div class="extensor-hand-box">
+            <img id="extensorHandMainImage" src="https://res.cloudinary.com/dreh6wst7/image/upload/databaseimages/u3xzjr77xagqsegkoppa.png" class="extensor-hand-image" alt="Hand Image">
+        </div>
 
-            <div id="bothExtensorHandSelection" class="both-hands-container hidden">
-                <div class="hand-selection">
-                    <h3>Left Hand</h3>
-                    <div id="leftExtensorZoneSelection"></div>
-                </div>
-                <div class="hand-selection">
-                    <h3>Right Hand</h3>
-                    <div id="rightExtensorZoneSelection"></div>
-                </div>
-            </div>
-
-            <div id="singleExtensorHandSelection" class="hand-selection">
-                <h3 id="extensorHandTitle"></h3>
-                <div id="singleExtensorZoneSelection"></div>
-            </div>
-        
-            <!-- Finger Selection Box (Right Side) -->
-            <div id="fingerSelectionBox">
+        <div id="leftHandSelection1" class="hand-selection hidden">
+            <h3>Left Hand</h3>
+            <div>
+                <table class="zone-table1">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header1">Index</th>
+                            <th class="finger-header1">Middle</th>
+                            <th class="finger-header1">Ring</th>
+                            <th class="finger-header1">Little</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name1">1</td>
+                            <td><select class="finger-dropdown1" id="left_zone1_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone1_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone1_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone1_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">2</td>
+                            <td><select class="finger-dropdown1" id="left_zone2_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone2_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone2_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone2_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                           
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">3</td>
+                            <td><select class="finger-dropdown1" id="left_zone3_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone3_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone3_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone3_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">4</td>
+                            <td><select class="finger-dropdown1" id="left_zone4_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone4_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone4_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone4_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">5</td>
+                            <td><select class="finger-dropdown1" id="left_zone5_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone5_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone5_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone5_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">6</td>
+                            <td><select class="finger-dropdown1" id="left_zone6_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone6_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone6_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone6_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">7</td>
+                            <td><select class="finger-dropdown1" id="left_zone7_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone7_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone7_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_zone7_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                <label for="left_zone8_indexx" style="margin-right: 10px; font-weight: bold;">8</label>
+                                <select class="finger-dropdown1" id="left_zone8_indexx" style="min-width: 120px; padding: 5px;">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
                 
+                <h4 style="margin-top: 20px;">Thumb Zones</h4>
+                <table class="zone-table1">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header1">T1</th>
+                            <th class="finger-header1">T2</th>
+                            <th class="finger-header1">T3</th>
+                            <th class="finger-header1">T4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">THUMB</td>
+                            <td><select class="finger-dropdown1" id="left_thumb_t11">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_thumb_t22">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_thumb_t33">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="left_thumb_t44">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="rightHandSelection1" class="hand-selection hidden">
+            <h3>Right Hand</h3>
+            <div>
+                <table class="zone-table1">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header1">Index</th>
+                            <th class="finger-header1">Middle</th>
+                            <th class="finger-header1">Ring</th>
+                            <th class="finger-header1">Little</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name1">1</td>
+                            <td><select class="finger-dropdown1" id="right_zone1_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone1_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone1_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone1_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">2</td>
+                            <td><select class="finger-dropdown1" id="right_zone2_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone2_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone2_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone2_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                           
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">3</td>
+                            <td><select class="finger-dropdown1" id="right_zone3_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone3_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone3_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone3_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">4</td>
+                            <td><select class="finger-dropdown1" id="right_zone4_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone4_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone4_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone4_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">5</td>
+                            <td><select class="finger-dropdown1" id="right_zone5_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone5_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone5_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone5_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">6</td>
+                            <td><select class="finger-dropdown1" id="right_zone6_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone6_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone6_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone6_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="zone-name1">7</td>
+                            <td><select class="finger-dropdown1" id="right_zone7_indexx">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone7_middlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone7_ringg">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_zone7_littlee">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                <label for="right_zone8_indexx" style="margin-right: 10px; font-weight: bold;">8</label>
+                                <select class="finger-dropdown1" id="right_zone8_indexx" style="min-width: 120px; padding: 5px;">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </td>
+                            
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4 style="margin-top: 20px;">Thumb Zones</h4>
+                <table class="zone-table1">
+                    <thead>
+                        <tr>
+                            <th>Zone</th>
+                            <th class="finger-header1">T1</th>
+                            <th class="finger-header1">T2</th>
+                            <th class="finger-header1">T3</th>
+                            <th class="finger-header1">T4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="zone-name">THUMB</td>
+                            <td><select class="finger-dropdown1" id="right_thumb_t11">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_thumb_t22">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_thumb_t33">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                            <td><select class="finger-dropdown1" id="right_thumb_t44">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    showExtensorHandImage();
-});
-
-function toggleExtensorHandSelection(isInjuryPresent) {
-    document.getElementById("extensorHandSelectionSection").classList.toggle("hidden", !isInjuryPresent);
-    document.getElementById("extensorHandImageSection").classList.add("hidden");
-}
-
-function showExtensorHandImage() {
-    const selectedHand = document.querySelector('input[name="extensorHandSelection"]:checked')?.value;
-    if (!selectedHand) return;
-
-    document.getElementById("extensorHandImageSection").classList.remove("hidden");
-
-    if (selectedHand === "both") {
-        document.getElementById("singleExtensorHandSelection").classList.add("hidden");
-        document.getElementById("bothExtensorHandSelection").classList.remove("hidden");
-        document.getElementById("leftExtensorZoneSelection").innerHTML = generateExtensorZoneSelectionHTML("left");
-        document.getElementById("rightExtensorZoneSelection").innerHTML = generateExtensorZoneSelectionHTML("right");
-    } else {
-        document.getElementById("bothExtensorHandSelection").classList.add("hidden");
-        document.getElementById("singleExtensorHandSelection").classList.remove("hidden");
-        document.getElementById("extensorHandTitle").innerText = selectedHand.charAt(0).toUpperCase() + selectedHand.slice(1) + " Hand";
-        document.getElementById("singleExtensorZoneSelection").innerHTML = generateExtensorZoneSelectionHTML(selectedHand);
-    }
-}
-
-function generateExtensorZoneSelectionHTML(hand) {
-    let zonesHTML = `<label><strong>Select Zones:</strong></label><div class="extensor-checkbox-group vertical-zones">`;
-
-    for (let i = 1; i <= 7; i++) {
-        zonesHTML += `
-            <div>
-                <input type="checkbox" id="${hand}ExtensorZone${i}" name="${hand}ExtensorZones" value="zone${i}" onclick="toggleExtensorFingerSelection('${hand}', ${i})">
-                <label for="${hand}ExtensorZone${i}">Zone ${i}</label>
-            </div>
-            <div id="${hand}ExtensorFingerSelection${i}" class="hidden finger-selection">
-                ${generateFingerSelectionHTML(hand, i)}
-            </div>
-        `;
+    function toggleExtensorHandSelection(isInjuryPresent) {
+        document.getElementById("extensorHandSelectionSection").classList.toggle("hidden", !isInjuryPresent);
+        document.getElementById("extensorHandImageSection").classList.add("hidden");
+        document.getElementById("leftHandSelection1").classList.add("hidden");
+        document.getElementById("rightHandSelection1").classList.add("hidden");
     }
 
-    // Zone 8 has no finger selections
-    zonesHTML += `
-        <div>
-            <input type="checkbox" id="${hand}ExtensorZone8" name="${hand}ExtensorZones" value="zone8">
-            <label for="${hand}ExtensorZone8">Zone 8</label>
-        </div>
-    `;
+    function showExtensorHandImage(selectedHand) {
+        document.getElementById("extensorHandImageSection").classList.remove("hidden");
 
-    // Thumb selection below Zone 8
-    zonesHTML += `
-        <div>
-            <input type="checkbox" id="${hand}ThumbSelection" name="${hand}ExtensorZones" value="thumb" onclick="toggleThumbOptions('${hand}')">
-            <label for="${hand}ThumbSelection"><strong>Thumb</strong></label>
-        </div>
-        <div id="${hand}ThumbOptions" class="hidden finger-selection">
-            ${generateThumbOptionsHTML(hand)}
-        </div>
-    `;
+        // Hide both selections first
+        document.getElementById("leftHandSelection1").classList.add("hidden");
+        document.getElementById("rightHandSelection1").classList.add("hidden");
 
-    zonesHTML += `</div>`;
-    return zonesHTML;
-}
-
-function generateFingerSelectionHTML(hand, zone) {
-    if (zone === 8) return ""; // No fingers for Zone 8
-
-    return `
-        <label><strong>Select Finger for Zone ${zone}:</strong></label>
-        <div class="extensor-checkbox-group">
-            <input type="checkbox" id="${hand}IndexZone${zone}" name="${hand}ExtensorFingerZone${zone}" value="index">
-            <label for="${hand}IndexZone${zone}">Index</label>
-
-            <input type="checkbox" id="${hand}MiddleZone${zone}" name="${hand}ExtensorFingerZone${zone}" value="middle">
-            <label for="${hand}MiddleZone${zone}">Middle</label>
-
-            <input type="checkbox" id="${hand}RingZone${zone}" name="${hand}ExtensorFingerZone${zone}" value="ring">
-            <label for="${hand}RingZone${zone}">Ring</label>
-
-            <input type="checkbox" id="${hand}LittleZone${zone}" name="${hand}ExtensorFingerZone${zone}" value="little">
-            <label for="${hand}LittleZone${zone}">Little</label>
-        </div>
-    `;
-}
-
-function generateThumbOptionsHTML(hand) {
-    return `
-        <label><strong>Select Thumb Zones:</strong></label>
-        <div class="extensor-checkbox-group">
-            <input type="checkbox" id="${hand}ThumbT1" name="${hand}ThumbZones" value="T1">
-            <label for="${hand}ThumbT1">T1</label>
-
-            <input type="checkbox" id="${hand}ThumbT2" name="${hand}ThumbZones" value="T2">
-            <label for="${hand}ThumbT2">T2</label>
-
-            <input type="checkbox" id="${hand}ThumbT3" name="${hand}ThumbZones" value="T3">
-            <label for="${hand}ThumbT3">T3</label>
-
-            <input type="checkbox" id="${hand}ThumbT4" name="${hand}ThumbZones" value="T4">
-            <label for="${hand}ThumbT4">T4</label>
-        </div>
-    `;
-}
-
-function toggleExtensorFingerSelection(hand, zone) {
-    const selectionBox = document.getElementById(`${hand}ExtensorFingerSelection${zone}`);
-    const isChecked = document.getElementById(`${hand}ExtensorZone${zone}`).checked;
-    selectionBox.classList.toggle("hidden", !isChecked);
-}
-
-function toggleThumbOptions(hand) {
-    const thumbOptions = document.getElementById(`${hand}ThumbOptions`);
-    const isChecked = document.getElementById(`${hand}ThumbSelection`).checked;
-    thumbOptions.classList.toggle("hidden", !isChecked);
-}
-
-</script>
-<style>
-    .extensor-checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.vertical-zones {
-    align-items: flex-start;
-}
-
-.finger-selection {
-    margin-left: 20px;
-    padding: 5px;
-    border-left: 2px solid #ccc;
-}
-
-.hidden {
-    display: none;
-}
-
-</style>
+        // Show the appropriate selections based on the hand choice
+        if (selectedHand === "left" || selectedHand === "both") {
+            document.getElementById("leftHandSelection1").classList.remove("hidden");
+        }
+        
+        if (selectedHand === "right" || selectedHand === "both") {
+            document.getElementById("rightHandSelection1").classList.remove("hidden");
+        }
+    }
+    </script>
 
 <hr style="border-top: 2px dotted black; width: 100%;">
 
@@ -6245,7 +6549,11 @@ function toggleThumbOptions(hand) {
             
             // Save PDF
             loadingElement.innerHTML = 'Saving PDF...';
-            pdf.save(`${formId}_form.pdf`);
+            const hospitalNo = document.getElementById('HospitalNo')?.value || 'UnknownHospitalNo';
+const now = new Date();
+const formattedDate = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(2, '0')}-${now.getFullYear()}`;
+pdf.save(`${hospitalNo}_${formattedDate}.pdf`);
+
             
         } catch (error) {
             console.error('PDF generation failed:', error);
